@@ -59,13 +59,19 @@ function parseCommand(input)
         key['r1'] = 1
       end
       if command:find('lk') ~= nil then
-        key['circle'] = 1
+        key['x'] = 1
       end
       if command:find('mk') ~= nil then
-        key['x'] = 1
+        key['circle'] = 1
       end
       if command:find('hk') ~= nil then
         key['r2'] = 1
+      end
+      if command:find('start') ~= nil then
+        key['start'] = 1
+      end
+      if command:find('select') ~= nil then
+        key['select'] = 1
       end
       result[j] = key
     end
