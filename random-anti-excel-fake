@@ -14,7 +14,9 @@ gui.register(function()
     count = count + 1
 
     if guard then
-      if count < 80 then
+      if count < 20 then
+        joypad.set(2, {})
+      elseif count < 80 then
         joypad.set(2, {["down"] = 1, ["right"] = 1})
       else
         joypad.set(2, {})
